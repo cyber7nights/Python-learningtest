@@ -29,8 +29,3 @@ print(co)
 
 #list和tuple是Python内置的有序集合，一个可变(列表)，一个不可变（元组）。根据需要来选择使用它们。
 
-#参考源码
-
-#the_list.py
-
-#the_tuple.py
