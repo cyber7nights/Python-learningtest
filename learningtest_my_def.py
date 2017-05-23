@@ -8,3 +8,5 @@ def my_abs(x):
     else:
         return -x
 
+def enroll(name,age,gender,city='beijing'):#城市默认值为北京
+    print('name:',name)
