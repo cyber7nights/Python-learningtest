@@ -62,7 +62,24 @@ print(L2)
 #
 # 要创建一个generator，有很多种方法。第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：
 
-L=(x*x for x in range(1,11))
-print(L)
-for l in L:
-    print(l)
+def triangles():
+    L=[1]
+    while True:
+        yield L
+        L.append(0)
+        L=[L[i-1]+L[i] for i in range(len(L))]
+        if len(L) > 10:
+           break
+for m in triangles():
+    print(m)
+
+def triangles(n):
+    L=[1]
+    while True:
+        yield L
+        L.append(0)
+        L=[L[i-1]+L[i] for i in range(len(L))]
+        if len(L) > n:
+           break
+for m in triangles(10):
+    print(m)
